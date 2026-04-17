@@ -1,0 +1,111 @@
+@use "../utilities/variables" as *;
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+  margin-top: 70px;
+background: linear-gradient(rgba(11,15,26,0.5), rgba(11,15,26,1)),
+           url('../../img/Dojo+of+Blades+_+CS+2.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: zoomBg 10s ease-in-out infinite alternate;
+   margin-top: 70px;
+}
+
+@keyframes zoomBg {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+.hero h1 {
+  color: #ff4655;
+  font-size: 80px;
+  font-weight: 800;
+    text-shadow: 0 0 25px rgba(255, 70, 85, 0.7);
+  letter-spacing: 2px;
+}
+
+.hero p {
+  color: #ccc;
+  margin: 20px 0;
+}
+
+.btn-hero {
+  background: #ff4655;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn-hero:hover {
+  background: #ffd84d;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.secciones {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.secciones h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #ff4655;
+  margin-top: 10px;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.4);
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    animation: none;
+    h1{
+      font-size: 2.5rem;
+    }
+  }
+}

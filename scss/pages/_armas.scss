@@ -1,0 +1,51 @@
+@use "../utilities/variables" as *;
+
+.armas {
+  padding: 80px 20px;
+  text-align: center;
+  cursor: pointer;
+
+  h2 {
+    color: $color-texto;
+    margin-bottom: 40px;
+  }
+
+  .armas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+.arma {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+
+  img {
+    width: 60%;
+    border-radius: 10px;
+  }
+
+  h3 {
+    color: $color-marca;
+    margin-top: 10px;
+  }
+
+  p {
+    color: $color-secundario;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 70, 85, 0.4);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .armas .armas-grid {
+    grid-template-columns: 1fr;
+  }
+}

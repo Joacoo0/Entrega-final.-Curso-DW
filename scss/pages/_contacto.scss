@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+
+.contacto {
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    color: $color-texto;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $color-secundario;
+    margin-bottom: 30px;
+  }
+}
+
+.formulario {
+  max-width: 500px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  input,
+  textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
+    outline: none;
+  }
+
+  input:focus,
+  textarea:focus {
+    border: 1px solid $color-marca;
+  }
+
+  button {
+    background: $color-marca;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: $color-hover;
+    color: #000;
+    transform: scale(1.05);
+  }
+}

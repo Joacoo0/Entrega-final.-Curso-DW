@@ -1,0 +1,58 @@
+@use "../utilities/variables" as *;
+
+.mapas {
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    color: $color-texto;
+    margin-bottom: 40px;
+  }
+
+  .mapas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+.mapa {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+
+  img {
+    width: 80%;
+    display: block;
+    transition: 0.4s;
+  }
+
+  h3 {
+    color: $color-marca;
+    margin-top: 15px;
+  }
+
+  p {
+    color: $color-secundario;
+    padding: 0 15px 15px;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px rgba(255, 70, 85, 0.4);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mapas .mapas-grid {
+    grid-template-columns: 1fr;
+  }
+}

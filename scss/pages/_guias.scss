@@ -1,0 +1,53 @@
+@use "../utilities/variables" as *;
+
+
+.guias {
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    color: $color-texto;
+    margin-bottom: 40px;
+  }
+
+  .guias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+.guia {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  h3 {
+    color: $color-marca;
+    margin: 15px 0 10px;
+  }
+
+  p {
+    color: $color-secundario;
+    padding: 0 15px 15px;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 70, 85, 0.4);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .guias .guias-grid {
+    grid-template-columns: 1fr;
+  }
+}
